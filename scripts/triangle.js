@@ -1,4 +1,13 @@
 
+function setup() {
+  var can = createCanvas(800, 800);
+}
+
+function draw() {
+  clear();
+
+}
+
 var canvas0 = document.getElementById('sierptriangle');
 var ctx0 = canvas0.getContext('2d');
 

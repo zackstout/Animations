@@ -1,4 +1,13 @@
 
+function setup() {
+  var can = createCanvas(800, 800);
+}
+
+function draw() {
+  clear();
+
+}
+
 ctx10.moveTo(10, 20);
       ctx10.lineTo(390, 20);
       ctx10.stroke();

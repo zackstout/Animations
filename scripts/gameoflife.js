@@ -1,5 +1,15 @@
 
 
+
+function setup() {
+  var can = createCanvas(800, 800);
+}
+
+function draw() {
+  clear()
+}
+
+
 //i is column, j is row:
 //how terribly strange, it won't color the first one on the screen...has SOMETHING to do with the fact that i was calling fill() AFTER drawing the rect.:
 var startingCreature = [{i: 10, j: 10}, {i: 3, j: 5}, {i: 4, j: 4}, {i: 4, j: 5}, {i: 4, j: 3}, {i: 2, j: 4}];

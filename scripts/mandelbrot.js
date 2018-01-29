@@ -1,4 +1,14 @@
 
+function setup() {
+  var can = createCanvas(800, 800);
+}
+
+function draw() {
+  clear();
+
+}
+
+
 var canvasMan = document.getElementById('mandelbrot');
 var ctxMan = canvasMan.getContext('2d');
 
