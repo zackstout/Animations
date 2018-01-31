@@ -47,7 +47,7 @@ function drawLeaf() {
 
   ctx.translate(-400, -400);
 
-  start *= 0.9;
+  start *= 0.94;
 }
 
 //thank you stackoverflow:
@@ -60,7 +60,7 @@ function getRandomColor() {
   return color;
 }
 
-var startFlower = setInterval(drawLeaf, 1000);
+var startFlower = setInterval(drawLeaf, 800);
 
 //
 // ctx10.moveTo(10, 20);
