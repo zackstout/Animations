@@ -1,16 +1,20 @@
 
-function setup() {
-  var can = createCanvas(800, 800);
-}
 
-function draw() {
-  clear();
+//
+var ctx, can;
 
-}
+(function(window, document, undefined){
 
+window.onload = init;
 
-var canvasMan = document.getElementById('mandelbrot');
-var ctxMan = canvasMan.getContext('2d');
+  function init(){
+    can = document.getElementById('mandelbrot');
+    ctx = can.getContext('2d');
+    drawMandelbrot();
+  }
+
+})(window, document, undefined);
+
 
 function drawMandelbrot() {
   var mag = 260;
@@ -21,8 +25,8 @@ function drawMandelbrot() {
   // var panX = 0.56;
   // var panY = 0.64;
 
-  for (var x=0; x < canvasMan.width; x++) {
-    for (var y=0; y < canvasMan.height; y++) {
+  for (var x=0; x < can.width; x++) {
+    for (var y=0; y < can.height; y++) {
       var result = checkMandelbrot(x/mag - panX, y/mag - panY);
       // if (result) {
       //   ctxMan.fillStyle = 'black';
@@ -30,11 +34,11 @@ function drawMandelbrot() {
       // }
 
       if (result == 0) {
-        ctxMan.fillStyle = '#000';
+        ctx.fillStyle = '#000';
       } else {
-        ctxMan.fillStyle = 'hsl(284, 100%, ' + result + '%)';
+        ctx.fillStyle = 'hsl(284, 100%, ' + result + '%)';
       }
-      ctxMan.fillRect(x, y, 1, 1);
+      ctx.fillRect(x, y, 1, 1);
     }
   }
 }
@@ -65,7 +69,9 @@ function checkMandelbrot(x, y) {
   // return false;
 }
 
-drawMandelbrot();
+
+
+
 
 function drawJulia(r, i) {
   var mag = 45;
