@@ -1,17 +1,30 @@
 
+var can;
+var h = 800;
+var w = 800;
+var s = 360;
+
 function setup() {
-  var can = createCanvas(800, 800);
+  can = createCanvas(h, w);
 }
 
 function draw() {
   clear();
+  // console.log(can);
+  drawTrianglep5(s);
 
 }
 
-var canvas0 = document.getElementById('sierptriangle');
-var ctx0 = canvas0.getContext('2d');
 
-var vertices = [];
+var vertices = [{x: h/2, y: w/10}, {x: h/2 + s, y: w/10 + s*Math.pow(3, 0.5)}, {x: h/2 - s, y: w/10 + s*Math.pow(3, 0.5)}];
+
+function drawTrianglep5(s) {
+  noFill();
+  vertices.forEach((v) => {
+    arc(v.x, v.y, 25, 25, 0, 2*Math.PI);
+  });
+}
+
 
 function drawSierpTriangle(s) {
   //triangle:
@@ -82,14 +95,13 @@ function drawSierpTriangle(s) {
   // vertices.push({x: 400, y:420});
 }
 
-drawSierpTriangle(200);
-
-ctx0.beginPath();
-ctx0.arc(325, 270, 0.15, 0, 2*Math.PI);
-// ctx0.stroke();
-ctx0.fillStyle = 'black';
-ctx0.fill();
-var start = {x: 325, y: 270};
+// drawSierpTriangle(200);
+//
+// ctx0.beginPath();
+// ctx0.arc(325, 270, 0.15, 0, 2*Math.PI);
+// ctx0.fillStyle = 'black';
+// ctx0.fill();
+// var start = {x: 325, y: 270};
 
 function drawRandomPoint2() {
   var random = Math.floor(Math.random() * vertices.length);
@@ -122,9 +134,9 @@ function drawRandomPoint2() {
 }
 
 var fractalInt;
-vm.startSierp = function() {
-  fractalInt = setInterval(drawRandomPoint2, 0.01);
-};
-vm.stopSierp = function() {
-  clearInterval(fractalInt);
-};
+// vm.startSierp = function() {
+//   fractalInt = setInterval(drawRandomPoint2, 0.01);
+// };
+// vm.stopSierp = function() {
+//   clearInterval(fractalInt);
+// };
