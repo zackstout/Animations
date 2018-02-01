@@ -11,7 +11,9 @@
     circleCard(1, 1, 200, 300, cardioidPosition);
     cardioidPosition += 0.01;
     translate(-400, -400);
+    $('.num').html(cardioidPosition.toFixed(2));
   }
+
 
   //x is how far you iterate, r is radius, f controls number of flower petals or nodes:
   function circleCard(a, b, x, r, f) {

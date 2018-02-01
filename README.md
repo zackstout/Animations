@@ -8,7 +8,7 @@ A collection of animation scripts I've written to illustrate some cool mathemati
     - [Github Repo](http://github.com/zackstout/Cardioid-animation)
 - Mandelbrot Set
     - Thanks to [Progur!](http://progur.com/2017/02/create-mandelbrot-fractal-javascript.html) for inspiring this image.
-- Golden Ratio
+- Golden Ratio/Phyllotaxis
 - Game of Life
     - Not quite operational yet.
 - Sierpinski Triangle

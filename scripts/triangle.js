@@ -29,6 +29,7 @@ function draw() {
   // console.log(can);
   drawVertices(s);
   if (started) {
+    frameRate(100);
     drawNextPoint();
   }
 
