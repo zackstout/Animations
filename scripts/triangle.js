@@ -3,105 +3,62 @@ var can;
 var h = 800;
 var w = 800;
 var s = 360;
+var start = {x: 350, y: 250};
+var started = false;
+
+$(document).ready(() => {
+  $('#start').on('click', () => {
+    console.log('start clicked');
+    started = true;
+  });
+  $('#clear').on('click', () => {
+    console.log('end');
+    started = false;
+  });
+});
 
 function setup() {
   can = createCanvas(h, w);
+  arc(start.x, start.y, 0.5, 0.5, 0, 2*Math.PI);
+  fill(100);
+
 }
 
 function draw() {
-  clear();
+  // clear();
   // console.log(can);
-  drawTrianglep5(s);
+  drawVertices(s);
+  if (started) {
+    drawNextPoint();
+  }
 
 }
 
 
 var vertices = [{x: h/2, y: w/10}, {x: h/2 + s, y: w/10 + s*Math.pow(3, 0.5)}, {x: h/2 - s, y: w/10 + s*Math.pow(3, 0.5)}];
 
-function drawTrianglep5(s) {
-  noFill();
+function drawVertices(s) {
+  // noFill();
   vertices.forEach((v) => {
     arc(v.x, v.y, 25, 25, 0, 2*Math.PI);
   });
+  // console.log(random(5));
 }
 
+function drawNextPoint() {
+  var random = Math.floor(Math.random() * vertices.length);
+  var maxX = Math.max(vertices[random].x, start.x);
+  var minX = Math.min(vertices[random].x, start.x);
+  var maxY = Math.max(vertices[random].y, start.y);
+  var minY = Math.min(vertices[random].y, start.y);
 
-function drawSierpTriangle(s) {
-  //triangle:
-  ctx0.beginPath();
-  ctx0.arc(250, 50, 10, 0, 2*Math.PI);
-  ctx0.stroke();
-  vertices.push({x: 250, y:50});
+  var newPoint = {x: minX + (maxX - minX)/2, y: minY + (maxY - minY)/2};
+  fill(100);
+  arc(newPoint.x, newPoint.y, 0.5, 0.5, 0, 2*Math.PI);
 
-  ctx0.beginPath();
-  ctx0.arc(250 + s, 50 + s*Math.pow(3, 0.5), 10, 0, 2*Math.PI);
-  ctx0.stroke();
-  vertices.push({x: 250 + s, y:50 + s*Math.pow(3, 0.5)});
-
-  ctx0.beginPath();
-  ctx0.arc(250 - s, 50 + s*Math.pow(3, 0.5), 10, 0, 2*Math.PI);
-  ctx0.stroke();
-  vertices.push({x: 250 - s, y:50 + s*Math.pow(3, 0.5)});
-
-
-
-  // Pentagon:
-  // ctx0.beginPath();
-  // ctx0.arc(50, 200, 10, 0, 2*Math.PI);
-  // ctx0.stroke();
-  // vertices.push({x: 50, y:200});
-  //
-  // ctx0.beginPath();
-  // ctx0.arc(450, 200, 10, 0, 2*Math.PI);
-  // ctx0.stroke();
-  // vertices.push({x: 450, y:200});
-  //
-  // ctx0.beginPath();
-  // ctx0.arc(100, 420, 10, 0, 2*Math.PI);
-  // ctx0.stroke();
-  // vertices.push({x: 100, y:420});
-  //
-  // ctx0.beginPath();
-  // ctx0.arc(400, 420, 10, 0, 2*Math.PI);
-  // ctx0.stroke();
-  // vertices.push({x: 400, y:420});
-
-  // ctx0.beginPath();
-  // ctx0.arc(250, 50, 10, 0, 2*Math.PI);
-  // ctx0.stroke();
-  // vertices.push({x: 250, y:50});
-
-
-
-  //irregular quad:
-  // ctx0.beginPath();
-  // ctx0.arc(50, 100, 10, 0, 2*Math.PI);
-  // ctx0.stroke();
-  // vertices.push({x: 50, y:100});
-  //
-  // ctx0.beginPath();
-  // ctx0.arc(450, 200, 10, 0, 2*Math.PI);
-  // ctx0.stroke();
-  // vertices.push({x: 450, y:200});
-  //
-  // ctx0.beginPath();
-  // ctx0.arc(100, 420, 10, 0, 2*Math.PI);
-  // ctx0.stroke();
-  // vertices.push({x: 100, y:420});
-  //
-  // ctx0.beginPath();
-  // ctx0.arc(400, 420, 10, 0, 2*Math.PI);
-  // ctx0.stroke();
-  // vertices.push({x: 400, y:420});
+  start.x = newPoint.x;
+  start.y = newPoint.y;
 }
-
-// drawSierpTriangle(200);
-//
-// ctx0.beginPath();
-// ctx0.arc(325, 270, 0.15, 0, 2*Math.PI);
-// ctx0.fillStyle = 'black';
-// ctx0.fill();
-// var start = {x: 325, y: 270};
 
 function drawRandomPoint2() {
   var random = Math.floor(Math.random() * vertices.length);
