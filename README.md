@@ -4,16 +4,16 @@ A collection of animation scripts I've written to illustrate some cool mathemati
 
 ## Animations
 - Cardioid (Multiplication Tables)
-[al]('google.com')
-    <!-- - Thanks to [Mathologer]('https://www.youtube.com/watch?v=qhbuKbxJsk8') for inspiring this animation. -->
-    <!-- - [Github Repo]('https://github.com/zackstout/Cardioid-animation') -->
+<!-- [al]('google.com') -->
+    - Thanks to [Mathologer]('http://www.youtube.com/watch?v=qhbuKbxJsk8') for inspiring this animation.
+    - [Github Repo]('http://github.com/zackstout/Cardioid-animation')
 - Mandelbrot Set
-    <!-- - Thanks to [Progur!]('http://progur.com/2017/02/create-mandelbrot-fractal-javascript.html') for inspiring this image. -->
+    - Thanks to [Progur!]('http://progur.com/2017/02/create-mandelbrot-fractal-javascript.html') for inspiring this image.
 - Golden Ratio
 - Game of Life
     - Not quite operational yet.
 - Sierpinski Triangle
-    - Thanks to my friend [Aaron]('http://github.com/bozeman42') for enlightening me about this wonderful algorithm!
+    - Thanks to my friend [Aaron]('github.com/bozeman42') for enlightening me about this wonderful algorithm!
 
 ## Stretch Goals
 - add Pong and sockets for player-to-player interaction
