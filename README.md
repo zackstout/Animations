@@ -4,10 +4,11 @@ A collection of animation scripts I've written to illustrate some cool mathemati
 
 ## Animations
 - Cardioid (Multiplication Tables)
-    - Thanks to [Mathologer]('https://www.youtube.com/watch?v=qhbuKbxJsk8') for inspiring this animation.
-    - [Github Repo]('https://github.com/zackstout/Cardioid-animation')
+[al]('google.com')
+    <!-- - Thanks to [Mathologer]('https://www.youtube.com/watch?v=qhbuKbxJsk8') for inspiring this animation. -->
+    <!-- - [Github Repo]('https://github.com/zackstout/Cardioid-animation') -->
 - Mandelbrot Set
-    - Thanks to [Progur!]('http://progur.com/2017/02/create-mandelbrot-fractal-javascript.html') for inspiring this image.
+    <!-- - Thanks to [Progur!]('http://progur.com/2017/02/create-mandelbrot-fractal-javascript.html') for inspiring this image. -->
 - Golden Ratio
 - Game of Life
     - Not quite operational yet.
