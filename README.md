@@ -4,7 +4,6 @@ A collection of animation scripts I've written to illustrate some cool mathemati
 
 ## Animations
 - Cardioid (Multiplication Tables)
-<!-- [al]('google.com') -->
     - Thanks to [Mathologer](http://www.youtube.com/watch?v=qhbuKbxJsk8) for inspiring this animation.
     - [Github Repo](http://github.com/zackstout/Cardioid-animation)
 - Mandelbrot Set
