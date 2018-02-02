@@ -13,6 +13,8 @@ A collection of animation scripts I've written to illustrate some cool mathemati
     - Not quite operational yet.
 - Sierpinski Triangle
     - Thanks to my friend [Aaron](http://github.com/bozeman42) for enlightening me about this wonderful algorithm!
+- Pong
+    - Yep! Let's play Pong!
 
 ## Stretch Goals
 - add Pong and sockets for player-to-player interaction
