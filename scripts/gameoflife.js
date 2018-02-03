@@ -46,6 +46,21 @@ function makeGrid(s) {
   // console.log(gridValues);
 }
 
+function drawGrid(s) {
+  w = can.width;
+  h = can.height;
+  offset = 1000/s;
+  start = w/(s*2);
+
+  for (var i = start; i < w - offset; i += 2*start) {
+    var row = [];
+    for (var j = start; j < h - offset; j += 2*start) {
+      fill('lightgray');
+      rect(i, j, 2*start - 2, 2*start - 2);
+    }
+  }
+}
+
 
 function getNeighbors(x) {
     neighbors = [];
@@ -116,6 +131,11 @@ function getNeighbors(x) {
       nextGridValues[x.index][x.jindex].value = 1;
     }
 
+    //forgot we needed this too. Wait or do we?
+    // if (total ==2 && x.value) {
+    //   nextGridValues[x.index][x.jindex].value = 1;
+    // }
+
     total = 0;
     //And if total == 2, it stays in its current state.
   }
@@ -166,7 +186,7 @@ function draw() {
   //
   // liveOrDie({index: 5, jindex: 4, value: 0});
   //
-  makeGrid(s);
+  drawGrid(s);
   var xOff, yOff;
 
   nextGridValues.forEach(function(row) {
