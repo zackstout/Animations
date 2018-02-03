@@ -186,7 +186,7 @@ function draw() {
   //
   // liveOrDie({index: 5, jindex: 4, value: 0});
   //
-  drawGrid(s);
+  // drawGrid(s);
   var xOff, yOff;
 
   nextGridValues.forEach(function(row) {
