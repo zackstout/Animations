@@ -9,7 +9,6 @@
 //   clear()
 // }
 
-
 //i is column, j is row:
 //how terribly strange, it won't color the first one on the screen...has SOMETHING to do with the fact that i was calling fill() AFTER drawing the rect.:
 var startingCreature = [{i: 10, j: 10}, {i: 3, j: 5}, {i: 4, j: 4}, {i: 4, j: 5}, {i: 4, j: 3}, {i: 2, j: 4}];
@@ -18,6 +17,7 @@ var s = 40;
 
 //to keep track of which cells are alive/dead:
 var gridValues = [];
+var nextGridValues = [];
 
 //trick for making variables global:
 var can;
@@ -41,6 +41,7 @@ function makeGrid(s) {
       row.push({i: i, j: j, value: 0, index: 2*(i - start) / s, jindex: 2*(j - start) / s});
     }
     gridValues.push(row);
+    nextGridValues.push(row);
   }
   // console.log(gridValues);
 }
@@ -105,27 +106,25 @@ function getNeighbors(x) {
       }
     });
 
-    // console.log(total);
-    // console.log(x);
-
     //It always ends up dead in this situation:
     if (total < 2 || total > 3) {
-      gridValues[x.index][x.jindex].value = 0;
+      nextGridValues[x.index][x.jindex].value = 0;
     }
 
     //And it always ends up alive in this situation:
     if (total == 3) {
-      gridValues[x.index][x.jindex].value = 1;
+      nextGridValues[x.index][x.jindex].value = 1;
     }
-    //And if total == 2, it stays in its current state.
 
-    // console.log(x);
+    total = 0;
+    //And if total == 2, it stays in its current state.
   }
 
 
 
 function setup() {
   can = createCanvas(800, 800);
+  // frameRate(7);
 
   makeGrid(s);
 
@@ -139,33 +138,59 @@ function setup() {
     // fill(0, 200);
 
     gridValues[item.i][item.j].value = 1;
+
   });
 
   //an array of column arrays (catalogued by "index") containing row-elements (catalogued by "jindex"):
   console.log(gridValues);
+  // console.log(nextGridValues);
 
-  // Seems to be working:
-  // gridValues.forEach(function(row) {
-  //   row.forEach(function(x) {
-  //     if (x.value) {
-  //       console.log(getNeighbors(x));
-  //     }
-  //   });
-  // });
+  gridValues.forEach(function(row) {
+    row.forEach(function(c) {
+      liveOrDie(c);
+    });
+  });
+
+  console.log(nextGridValues);
 
 } //end SETUP
 
 
 
 function draw() {
+  setFrameRate(2);
   //whoa, need to have 0 here for it to show cells....And even if you take away, still gives the '2 argument' error...
   // background(0, 50);
   //ahh, you must pass something to the fill function, OK:
-  // fill(0, 50);
+  fill(0, 50);
   //
   // liveOrDie({index: 5, jindex: 4, value: 0});
   //
-  // makeGrid(s);
+  makeGrid(s);
+  var xOff, yOff;
+
+  nextGridValues.forEach(function(row) {
+    row.forEach(function(c) {
+      xOff = start + c.index * 2*start;
+      yOff = start + c.jindex * 2*start;
+      if (c.value) {
+        // console.log('value', xOff, yOff);
+        fill('black');
+        rect(xOff, yOff, 2*start - 2, 2*start - 2);
+      } else {
+        fill('lightgray');
+        rect(xOff, yOff, 2*start - 2, 2*start - 2);
+      }
+    });
+  });
+
+  gridValues = nextGridValues;
+
+  gridValues.forEach(function(row) {
+    row.forEach(function(c) {
+      liveOrDie(c);
+    });
+  });
 
   // gridValues.forEach(function(row) {
   //   row.forEach(function(x) {
