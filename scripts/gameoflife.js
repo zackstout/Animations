@@ -1,13 +1,13 @@
 
 
 
-function setup() {
-  var can = createCanvas(800, 800);
-}
-
-function draw() {
-  clear()
-}
+// function setup() {
+//   var can = createCanvas(800, 800);
+// }
+//
+// function draw() {
+//   clear()
+// }
 
 
 //i is column, j is row:
@@ -86,9 +86,9 @@ function getNeighbors(x) {
       }
     }
 
-    if (x.value) {
-      // console.log(neighbors);
-    }
+    // if (x.value) {
+    //   console.log(neighbors);
+    // }
     return neighbors;
   } // end getNeighbors
 
@@ -124,9 +124,6 @@ function getNeighbors(x) {
 
 
 
-
-
-
 function setup() {
   can = createCanvas(800, 800);
 
@@ -144,11 +141,15 @@ function setup() {
     gridValues[item.i][item.j].value = 1;
   });
 
+  //an array of column arrays (catalogued by "index") containing row-elements (catalogued by "jindex"):
   console.log(gridValues);
 
+  // Seems to be working:
   // gridValues.forEach(function(row) {
   //   row.forEach(function(x) {
-  //     getNeighbors(x);
+  //     if (x.value) {
+  //       console.log(getNeighbors(x));
+  //     }
   //   });
   // });
 
@@ -161,11 +162,11 @@ function draw() {
   // background(0, 50);
   //ahh, you must pass something to the fill function, OK:
   // fill(0, 50);
-
-  // liveOrDie({index: 5, jindex: 4, value: 0});
-
-  makeGrid(s);
   //
+  // liveOrDie({index: 5, jindex: 4, value: 0});
+  //
+  // makeGrid(s);
+
   // gridValues.forEach(function(row) {
   //   row.forEach(function(x) {
   //     // var neighbors = getNeighbors(x);
