@@ -1,14 +1,4 @@
 
-
-
-// function setup() {
-//   var can = createCanvas(800, 800);
-// }
-//
-// function draw() {
-//   clear()
-// }
-
 //i is column, j is row:
 //how terribly strange, it won't color the first one on the screen...has SOMETHING to do with the fact that i was calling fill() AFTER drawing the rect.:
 var startingCreature = [{i: 10, j: 10}, {i: 3, j: 5}, {i: 4, j: 4}, {i: 4, j: 5}, {i: 4, j: 3}, {i: 2, j: 4}];
@@ -53,25 +43,10 @@ function makeGrid(s) {
     nextGridValues.push(row2);
     nextState.push(row3);
   }
-  console.log(gridValues);
+  // console.log(gridValues);
   //wait why on earth are some of the values 1 at this point??
   // if we comment out startingCreature.forEach() it's all zeroes....but why would that run before this???
 }
-
-// function drawGrid(s) {
-//   w = can.width;
-//   h = can.height;
-//   offset = 1000/s;
-//   start = w/(s*2);
-//
-//   for (var i = start; i < w - offset; i += 2*start) {
-//     var row = [];
-//     for (var j = start; j < h - offset; j += 2*start) {
-//       fill('lightgray');
-//       rect(i, j, 2*start - 2, 2*start - 2);
-//     }
-//   }
-// }
 
 
 function getNeighbors(x) {
@@ -139,16 +114,20 @@ function getNeighbors(x) {
     }
 
     //And it always ends up alive in this situation:
-    if (total == 3) {
+    else if (total == 3) {
       nextGridValues[x.index][x.jindex].value = 1;
     }
 
-    //forgot we needed this too. Wait or do we?
-    // if (total ==2 && x.value) {
-    //   nextGridValues[x.index][x.jindex].value = 1;
-    // }
+    //forgot we needed this too. Wait or do we? I think so -- won't auto-persist:
+    else if (total == 2 && x.value) {
+      nextGridValues[x.index][x.jindex].value = 1;
+    }
 
-    total = 0;
+    else {
+      nextGridValues[x.index][x.jindex].value = 0;
+    }
+
+    // total = 0;
     //And if total == 2, it stays in its current state.
   }
 
@@ -160,7 +139,6 @@ function setup() {
 
   makeGrid(s);
 
-
 // Draw starting creature:
   startingCreature.forEach(function(item) {
     var xOff, yOff;
@@ -170,37 +148,41 @@ function setup() {
     rect(xOff, yOff, 2*start - 2, 2*start - 2);
     // fill(0, 200);
 
-    nextState[item.i][item.j].value = 1;
+    // Update gridValues:
+    gridValues[item.i][item.j].value = 1;
   });
 
-  //an array of column arrays (catalogued by "index") containing row-elements (catalogued by "jindex"):
+  // An array of column arrays (catalogued by "index") containing row-elements (catalogued by "jindex"):
   console.log(gridValues);
-  // console.log(nextGridValues);
 
-  // gridValues.forEach(function(row) {
-  //   row.forEach(function(c) {
-  //     liveOrDie(c);
-  //   });
-  // });
+  gridValues.forEach(function(row) {
+    row.forEach(function(c) {
+      liveOrDie(c);
+    });
+  });
 
-  // console.log(nextGridValues);
+  //ok this is correct i think:
+  console.log(nextGridValues);
 
 } //end SETUP
 
 
 
 function draw() {
-  // setFrameRate(2);
+  setFrameRate(2);
   // //whoa, need to have 0 here for it to show cells....And even if you take away, still gives the '2 argument' error...
   // // background(0, 50);
   // //ahh, you must pass something to the fill function, OK:
-  // fill(0, 50);
+  fill(0, 50);
+  // // //
+  // // // liveOrDie({index: 5, jindex: 4, value: 0});
+  // // //
+  // // // drawGrid(s);
+  var xOff, yOff;
+  console.log(nextGridValues);
   // //
-  // // liveOrDie({index: 5, jindex: 4, value: 0});
-  // //
-  // // drawGrid(s);
-  // var xOff, yOff;
-  //
+  gridValues = nextGridValues;
+
   // nextGridValues.forEach(function(row) {
   //   row.forEach(function(c) {
   //     xOff = start + c.index * 2*start;
@@ -208,45 +190,21 @@ function draw() {
   //     if (c.value) {
   //       // console.log('value', xOff, yOff);
   //       fill('black');
-  //       rect(xOff, yOff, 2*start - 2, 2*start - 2);
   //     } else {
   //       fill('lightgray');
-  //       rect(xOff, yOff, 2*start - 2, 2*start - 2);
   //     }
+  //     rect(xOff, yOff, 2*start - 2, 2*start - 2);
   //   });
   // });
-  //
-  // gridValues = nextGridValues;
-  //
-  // gridValues.forEach(function(row) {
-  //   row.forEach(function(c) {
-  //     liveOrDie(c);
-  //   });
-  // });
+  // //
+  // //
+  gridValues.forEach(function(row) {
+    row.forEach(function(c) {
+      liveOrDie(c);
+    });
+  });
 
-  // gridValues.forEach(function(row) {
-  //   row.forEach(function(x) {
-  //     // var neighbors = getNeighbors(x);
-  //     liveOrDie(x);
-  //
-  //     xOff = start + x.index * 2*start;
-  //     yOff = start + x.jindex * 2*start;
-  //
-  //     if (gridValues[x.index][x.jindex].value == 1) {
-  //       fill('black');
-  //       rect(xOff, yOff, 2*start - 2, 2*start - 2);
-  //
-  //     }
-  //     else {
-  //       fill('lightgray');
-  //       // rect(xOff, yOff, 2*start - 2, 2*start - 2);
-  //
-  //     }
-  //
-  //   });
-  // });
-
-
+  console.log(nextGridValues);
 
 
 } //end DRAW
