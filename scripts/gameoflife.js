@@ -151,6 +151,7 @@ function setup() {
   // frameRate(7);
 
   makeGrid(s);
+  
 
 // Draw starting creature:
   startingCreature.forEach(function(item) {
