@@ -18,6 +18,7 @@ var s = 40;
 //to keep track of which cells are alive/dead:
 var gridValues = [];
 var nextGridValues = [];
+var nextState = [];
 
 //trick for making variables global:
 var can;
@@ -42,24 +43,27 @@ function makeGrid(s) {
     }
     gridValues.push(row);
     nextGridValues.push(row);
+    nextState.push(row);
   }
-  // console.log(gridValues);
+  console.log(gridValues);
+  //wait why on earth are some of the values 1 at this point??
+  // if we comment out startingCreature.forEach() it's all zeroes....but why would that run before this???
 }
 
-function drawGrid(s) {
-  w = can.width;
-  h = can.height;
-  offset = 1000/s;
-  start = w/(s*2);
-
-  for (var i = start; i < w - offset; i += 2*start) {
-    var row = [];
-    for (var j = start; j < h - offset; j += 2*start) {
-      fill('lightgray');
-      rect(i, j, 2*start - 2, 2*start - 2);
-    }
-  }
-}
+// function drawGrid(s) {
+//   w = can.width;
+//   h = can.height;
+//   offset = 1000/s;
+//   start = w/(s*2);
+//
+//   for (var i = start; i < w - offset; i += 2*start) {
+//     var row = [];
+//     for (var j = start; j < h - offset; j += 2*start) {
+//       fill('lightgray');
+//       rect(i, j, 2*start - 2, 2*start - 2);
+//     }
+//   }
+// }
 
 
 function getNeighbors(x) {
@@ -115,7 +119,7 @@ function getNeighbors(x) {
 
     neighbors.forEach(function(n) {
       //n has two properties: i and j. i records its column, and j its row.
-      if (gridValues[n.i][n.j].value == 1 ) {
+      if (gridValues[n.i][n.j].value) {
         total ++;
         // console.log('aha', n.i, n.j);
       }
@@ -148,7 +152,7 @@ function setup() {
 
   makeGrid(s);
 
-//Draw starting creature:
+// Draw starting creature:
   startingCreature.forEach(function(item) {
     var xOff, yOff;
     xOff = start + item.i * 2*start;
@@ -157,60 +161,59 @@ function setup() {
     rect(xOff, yOff, 2*start - 2, 2*start - 2);
     // fill(0, 200);
 
-    gridValues[item.i][item.j].value = 1;
-
+    nextState[item.i][item.j].value = 1;
   });
 
   //an array of column arrays (catalogued by "index") containing row-elements (catalogued by "jindex"):
   console.log(gridValues);
   // console.log(nextGridValues);
 
-  gridValues.forEach(function(row) {
-    row.forEach(function(c) {
-      liveOrDie(c);
-    });
-  });
+  // gridValues.forEach(function(row) {
+  //   row.forEach(function(c) {
+  //     liveOrDie(c);
+  //   });
+  // });
 
-  console.log(nextGridValues);
+  // console.log(nextGridValues);
 
 } //end SETUP
 
 
 
 function draw() {
-  setFrameRate(2);
-  //whoa, need to have 0 here for it to show cells....And even if you take away, still gives the '2 argument' error...
-  // background(0, 50);
-  //ahh, you must pass something to the fill function, OK:
-  fill(0, 50);
+  // setFrameRate(2);
+  // //whoa, need to have 0 here for it to show cells....And even if you take away, still gives the '2 argument' error...
+  // // background(0, 50);
+  // //ahh, you must pass something to the fill function, OK:
+  // fill(0, 50);
+  // //
+  // // liveOrDie({index: 5, jindex: 4, value: 0});
+  // //
+  // // drawGrid(s);
+  // var xOff, yOff;
   //
-  // liveOrDie({index: 5, jindex: 4, value: 0});
+  // nextGridValues.forEach(function(row) {
+  //   row.forEach(function(c) {
+  //     xOff = start + c.index * 2*start;
+  //     yOff = start + c.jindex * 2*start;
+  //     if (c.value) {
+  //       // console.log('value', xOff, yOff);
+  //       fill('black');
+  //       rect(xOff, yOff, 2*start - 2, 2*start - 2);
+  //     } else {
+  //       fill('lightgray');
+  //       rect(xOff, yOff, 2*start - 2, 2*start - 2);
+  //     }
+  //   });
+  // });
   //
-  // drawGrid(s);
-  var xOff, yOff;
-
-  nextGridValues.forEach(function(row) {
-    row.forEach(function(c) {
-      xOff = start + c.index * 2*start;
-      yOff = start + c.jindex * 2*start;
-      if (c.value) {
-        // console.log('value', xOff, yOff);
-        fill('black');
-        rect(xOff, yOff, 2*start - 2, 2*start - 2);
-      } else {
-        fill('lightgray');
-        rect(xOff, yOff, 2*start - 2, 2*start - 2);
-      }
-    });
-  });
-
-  gridValues = nextGridValues;
-
-  gridValues.forEach(function(row) {
-    row.forEach(function(c) {
-      liveOrDie(c);
-    });
-  });
+  // gridValues = nextGridValues;
+  //
+  // gridValues.forEach(function(row) {
+  //   row.forEach(function(c) {
+  //     liveOrDie(c);
+  //   });
+  // });
 
   // gridValues.forEach(function(row) {
   //   row.forEach(function(x) {
