@@ -3,17 +3,17 @@
 A collection of animation scripts I've written to illustrate some cool mathematical ideas.
 
 ## Animations
-- Cardioid (Multiplication Tables)
+- **Cardioid (Multiplication Tables)**
     - Thanks to [Mathologer](http://www.youtube.com/watch?v=qhbuKbxJsk8) for inspiring this animation.
     - [Github Repo](http://github.com/zackstout/Cardioid-animation)
-- Mandelbrot Set
+- **Mandelbrot Set**
     - Thanks to [Progur!](http://progur.com/2017/02/create-mandelbrot-fractal-javascript.html) for inspiring this image.
-- Golden Ratio/Phyllotaxis
-- Game of Life
+- **Golden Ratio/Phyllotaxis**
+- **Game of Life**
     - Not quite operational yet.
-- Sierpinski Triangle
+- **Sierpinski Triangle**
     - Thanks to my friend [Aaron](http://github.com/bozeman42) for enlightening me about this wonderful algorithm!
-- Pong
+- **Pong**
     - Yep! Let's play Pong!
 
 ## Getting Started
