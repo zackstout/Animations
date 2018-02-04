@@ -16,6 +16,9 @@ A collection of animation scripts I've written to illustrate some cool mathemati
 - Pong
     - Yep! Let's play Pong!
 
+## Getting Started
+Just clone or download this repo, open up the `index.html`, and right-clicking, Open in Browser.
+
 ## Stretch Goals
 - add Pong and sockets for player-to-player interaction
 - let user drag vertices of Triangle
