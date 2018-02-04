@@ -34,16 +34,24 @@ function makeGrid(s) {
   //to be honest, not entirely sure why we need the -50. Well I suppose it's like going until (arr.length - 1):
   for (var i = start; i < w - offset; i += 2*start) {
     var row = [];
+    var row2 = [];
+    var row3 = [];
     for (var j = start; j < h - offset; j += 2*start) {
       fill('lightgray');
       rect(i, j, 2*start - 2, 2*start - 2);
 
       //value signifies alive (1) or dead (0):
-      row.push({i: i, j: j, value: 0, index: 2*(i - start) / s, jindex: 2*(j - start) / s});
+      // Need this rigamarole to avoid all arrays looking at the same object:
+      var x = {i: i, j: j, value: 0, index: 2*(i - start) / s, jindex: 2*(j - start) / s};
+      var y = Object.assign({}, x);
+      var z = Object.assign({}, x);
+      row.push(x);
+      row2.push(y);
+      row3.push(z);
     }
     gridValues.push(row);
-    nextGridValues.push(row);
-    nextState.push(row);
+    nextGridValues.push(row2);
+    nextState.push(row3);
   }
   console.log(gridValues);
   //wait why on earth are some of the values 1 at this point??
@@ -151,7 +159,7 @@ function setup() {
   // frameRate(7);
 
   makeGrid(s);
-  
+
 
 // Draw starting creature:
   startingCreature.forEach(function(item) {
