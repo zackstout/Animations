@@ -1,6 +1,6 @@
 
 # Animations
-A collection of animation scripts I've written to illustrate some cool mathematical ideas.
+A collection of animation scripts I've written to illustrate some cool mathematical ideas. See my [blog](http://zstout.com/#/math) for more information about the math and code going on behind the scenes of these animations, and my [portfolio](http://zstout.com/#/portfolio) for live demos.
 
 ## Animations
 - **Cardioid (Multiplication Tables)**
