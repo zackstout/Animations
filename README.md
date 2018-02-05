@@ -6,9 +6,11 @@ A collection of animation scripts I've written to illustrate some cool mathemati
 - **Cardioid (Multiplication Tables)**
     - Thanks to [Mathologer](http://www.youtube.com/watch?v=qhbuKbxJsk8) for inspiring this animation.
     - [Github Repo](http://github.com/zackstout/Cardioid-animation)
+- **Golden Ratio/Phyllotaxis**
+- **Cellular Automata**
+    - [Github Repo](https://github.com/zackstout/cellular-automata)
 - **Mandelbrot Set**
     - Thanks to [Progur!](http://progur.com/2017/02/create-mandelbrot-fractal-javascript.html) for inspiring this image.
-- **Golden Ratio/Phyllotaxis**
 - **Game of Life**
     - Not quite operational yet.
 - **Sierpinski Triangle**
