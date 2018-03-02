@@ -27,7 +27,7 @@ A collection of animation scripts I've written to illustrate some cool mathemati
 
 - **Pong**
     - Yep! Let's play Pong!
-    ![screen shot 2018-02-17 at 12 18 25 am](https://user-images.githubusercontent.com/29472568/36338598-44b3650e-1379-11e8-8a11-78ac9af6869f.png)
+
 
 
 ## Getting Started
