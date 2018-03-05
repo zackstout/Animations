@@ -23,15 +23,14 @@ A collection of animation scripts I've written to illustrate some cool mathemati
     ![screen shot 2018-02-17 at 12 18 51 am](https://user-images.githubusercontent.com/29472568/36338597-3cb5e782-1379-11e8-8111-1d87497c9e7d.png)
 
 - **Game of Life**
-    - Not quite operational yet.
+    - [Github Repo](https://github.com/zackstout/Game-of-life-3d-final)
 
 - **Sierpinski Triangle**
     - Thanks to my friend [Aaron](http://github.com/bozeman42) for enlightening me about this wonderful algorithm!
+    ![screen shot 2018-03-02 at 1 18 50 am](https://user-images.githubusercontent.com/29472568/36887639-bf1e162a-1db7-11e8-9273-431fc0bfeb24.png)
 
 - **Pong**
-    - Yep! Let's play Pong!
-    ![screen shot 2018-02-17 at 12 18 25 am](https://user-images.githubusercontent.com/29472568/36338598-44b3650e-1379-11e8-8a11-78ac9af6869f.png)
-
+    - [Github Repo](https://github.com/zackstout/pong-game)
 
 ## Getting Started
 Just clone or download this repo, open up the `index.html`, and right-clicking, Open in Browser.
