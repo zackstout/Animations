@@ -15,6 +15,7 @@ A collection of animation scripts I've written to illustrate some cool mathemati
 
 - **Cellular Automata**
     - [Github Repo](https://github.com/zackstout/cellular-automata)
+    - [Live Demo](https://zackstout.github.io/cellular-automata/)
     <!-- ![screen shot 2018-02-17 at 12 19 07 am](https://user-images.githubusercontent.com/29472568/36338589-0e29a9c6-1379-11e8-8dcc-100a873bff6d.png) -->
     ![](https://media.giphy.com/media/27bOn2mX7EWnIDan7u/giphy.gif)
 
