@@ -31,7 +31,7 @@ A collection of animation scripts I've written to illustrate some cool mathemati
     - [Github Repo](https://github.com/zackstout/sonic-boom-animation)
     - [Live Demo](https://zackstout.github.io/sonic-boom-animation/)
     
-    ![img](https://media.giphy.com/media/1sxrwapH6traeMLu51/giphy.gif)
+    ![](https://media.giphy.com/media/1sxrwapH6traeMLu51/giphy.gif)
     
 - **Charged Particles**
     - [Github Repo](https://github.com/zackstout/physics-of-attraction)
@@ -44,6 +44,23 @@ A collection of animation scripts I've written to illustrate some cool mathemati
     
     ![](https://media.giphy.com/media/27bOn2mX7EWnIDan7u/giphy.gif)
 
+- **Maze-Generation**
+    - [Github Repo](https://github.com/zackstout/maze-generator)
+    - [Live Demo](https://zackstout.github.io/maze-generator/)
+    
+    ![](https://media.giphy.com/media/6Gay6xtiKFu9hcgKcs/giphy.gif)
+
+- **Maze-Generation**
+    - [Github Repo](https://github.com/zackstout/vector-fields)
+    
+    ![](https://media.giphy.com/media/27bJJnnAUiCrNpsuoC/giphy.gif)
+
+- **Sorting**
+    - [Github Repo](https://github.com/zackstout/sorting-algorithms)
+    - [Live Demo](https://zackstout.github.io/sorting-algorithms/)
+    
+    ![](https://media.giphy.com/media/cCalx8nIGgjzw1bM2r/giphy.gif)
+    
 - **Golden Ratio/Phyllotaxis**
 
     ![](https://media.giphy.com/media/47GVENlu7UO8nCAstA/giphy.gif)
