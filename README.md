@@ -50,7 +50,7 @@ A collection of animation scripts I've written to illustrate some cool mathemati
     
     ![](https://media.giphy.com/media/6Gay6xtiKFu9hcgKcs/giphy.gif)
 
-- **Maze-Generation**
+- **Perlin Noise Vector Field**
     - [Github Repo](https://github.com/zackstout/vector-fields)
     
     ![](https://media.giphy.com/media/27bJJnnAUiCrNpsuoC/giphy.gif)
