@@ -6,27 +6,32 @@ A collection of animation scripts I've written to illustrate some cool mathemati
 - **Cardioid (Multiplication Tables)**
     - Thanks to [Mathologer](http://www.youtube.com/watch?v=qhbuKbxJsk8) for inspiring this animation.
     - [Github Repo](http://github.com/zackstout/Cardioid-animation)
+    
     ![](https://media.giphy.com/media/1fjEtBpVYD6PBMw1tf/giphy.gif)
 
 - **Logarithmic Spiral**
     - [Github Repo](https://github.com/zackstout/logarithmic-spiral)
     - [Live Demo](https://zackstout.github.io/logarithmic-spiral/)
+    
     ![img](https://media.giphy.com/media/33HpHklqjLpIwsGL4l/giphy.gif)
     
 - **Recaman Sequence**
     - [Github Repo](https://github.com/zackstout/recaman-sequence-visualization)
     - [Live Demo](https://zackstout.github.io/recaman-sequence-visualization/)
+    
     ![](https://media.giphy.com/media/2skXrGZ4114kcXOmrN/giphy.gif)
     
 - **Irrational Angles**
     - [Github Repo](https://github.com/zackstout/irrational-angles)
     - [Live Demo](https://zackstout.github.io/irrational-angles/)
+    
     ![img](https://media.giphy.com/media/4H6XQKORxinNOLrc2B/giphy.gif)
     
 - **Sonic Boom**
     - [Github Repo](https://github.com/zackstout/sonic-boom-animation)
     - [Live Demo](https://zackstout.github.io/sonic-boom-animation/)
-    <img src="https://media.giphy.com/media/1sxrwapH6traeMLu51/giphy.gif" width=500px>
+    
+    ![img](https://media.giphy.com/media/1sxrwapH6traeMLu51/giphy.gif)
     
 - **Charged Particles**
     - [Github Repo](https://github.com/zackstout/physics-of-attraction)
@@ -36,13 +41,17 @@ A collection of animation scripts I've written to illustrate some cool mathemati
 - **Cellular Automata**
     - [Github Repo](https://github.com/zackstout/cellular-automata)
     - [Live Demo](https://zackstout.github.io/cellular-automata/)
+    
     ![](https://media.giphy.com/media/27bOn2mX7EWnIDan7u/giphy.gif)
 
 - **Golden Ratio/Phyllotaxis**
+
     ![](https://media.giphy.com/media/47GVENlu7UO8nCAstA/giphy.gif)
 
 - **Game of Life**
     - [Github Repo](https://github.com/zackstout/Game-of-life-3d-final)
+    
+    ![](https://media.giphy.com/media/2kQC1p40oijIImaNSD/giphy.gif)
 
 - **Sierpinski Triangle**
     - Thanks to my friend [Aaron](http://github.com/bozeman42) for enlightening me about this wonderful algorithm!
