@@ -36,13 +36,13 @@ A collection of animation scripts I've written to illustrate some cool mathemati
 - **Charged Particles**
     - [Github Repo](https://github.com/zackstout/physics-of-attraction)
     - [Live Demo](https://zackstout.github.io/physics-of-attraction/)
-    <img src="https://media.giphy.com/media/3gYZUCrWjzeqizRnoZ/giphy.gif" width=500px>
+    <img src="https://media.giphy.com/media/2seI37aeeMQyKgqc1x/giphy.gif" width=500px>
     
 - **Cellular Automata**
     - [Github Repo](https://github.com/zackstout/cellular-automata)
     - [Live Demo](https://zackstout.github.io/cellular-automata/)
     
-    ![](https://media.giphy.com/media/27bOn2mX7EWnIDan7u/giphy.gif)
+    ![](https://media.giphy.com/media/fHiC2bAA9Jutd4rPOk/giphy.gif)
 
 - **Maze-Generation**
     - [Github Repo](https://github.com/zackstout/maze-generator)
