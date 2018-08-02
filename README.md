@@ -53,7 +53,7 @@ A collection of animation scripts I've written to illustrate some cool mathemati
 - **Perlin Noise Vector Field**
     - [Github Repo](https://github.com/zackstout/vector-fields)
     
-    ![](https://media.giphy.com/media/27bJJnnAUiCrNpsuoC/giphy.gif)
+    ![](https://media.giphy.com/media/2A1bfAYmjwwsGsC9F6/giphy.gif)
 
 - **Sorting**
     - [Github Repo](https://github.com/zackstout/sorting-algorithms)
